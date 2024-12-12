@@ -1,0 +1,43 @@
+<div class="dashboard">
+    <!-- Cards -->
+    <div class="cards-container">
+      <mat-card class="summary-card">
+        <h3>Total Users</h3>
+        <p>{{ totalUsers }}</p>
+      </mat-card>
+  
+      <mat-card class="summary-card">
+        <h3>Total Companies</h3>
+        <p>{{ totalCompanies }}</p>
+      </mat-card>
+    </div>
+  
+    <!-- Chart -->
+    <div class="chart-container">
+        <ngx-charts-pie-chart
+        [view]="viewpie"
+        [scheme]="colorScheme"
+        [results]="single"
+        [legend]="showLegend"
+        [explodeSlices]="explodeSlices"
+        [labels]="showLabels"
+        [doughnut]="doughnut"
+        [gradient]="gradient"
+      ></ngx-charts-pie-chart>
+      <ngx-charts-bar-vertical
+              [view]="view"
+              [scheme]="colorScheme"
+              [results]="single"
+              [gradient]="gradient"
+              [xAxis]="showXAxis"
+              [yAxis]="showYAxis"
+              [legend]="showLegend"
+              [showXAxisLabel]="showXAxisLabel"
+              [showYAxisLabel]="showYAxisLabel"
+              [xAxisLabel]="xAxisLabel"
+              [yAxisLabel]="yAxisLabel"
+              (select)="onSelect($event)">
+</ngx-charts-bar-vertical>
+    </div>
+  </div>
+  

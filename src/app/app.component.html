@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <div class="navbar">
+    NAVBAR
+  </div>
+  <div class="nav-content">
+    <div class="sidebar">
+      <p>Home</p>
+      <p>User</p>
+      <p>Settings</p>
+    </div>
+    <div class="content">
+      <div *ngIf="showSubSidebar" class="subnav">
+        <div>SUBNAV</div>
+        <div class="contextual-menu">
+          <button>Create | Import</button>
+          <ul>
+            <li>Option 1</li>
+            <li>Option 2</li>
+          </ul>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
